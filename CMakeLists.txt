@@ -94,6 +94,9 @@ find_package(catkin REQUIRED COMPONENTS
 generate_dynamic_reconfigure_options(
     cfg/FollowLane.cfg
     cfg/FollowLaneLuke.cfg
+    cfg/FollowLaneHough.cfg
+    cfg/DetectRed.cfg
+    
 )
 
 ###################################

@@ -1,0 +1,12 @@
+<launch>
+	<include file="$(find avt_vimba_camera)/launch/mono_camera.launch">
+		<arg name="ip" value="192.168.60.40"/>
+		<arg name="reverse_x" value="true"/>
+		<arg name="reverse_y" value="true"/>
+	</include>
+
+	<node name="Jacks_follow_lane" pkg="follow_lane_pkg" type="Jacks_follow_lane.py" required="true" output="screen">
+		<param name="imgtopic_name" type="str" value="camera_view" />
+	</node>
+
+</launch>
