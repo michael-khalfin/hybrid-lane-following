@@ -15,7 +15,8 @@ class FollowLine:
         rospy.loginfo("Follow line initialized")
         self.bridge = CvBridge()
         self.vel_msg = Twist()
-        self.empty = Empty()
+        #self.empty = Empty()
+        self.rate = rospy.Rate(20)
 
         self.cols = 0 # set later
 
@@ -26,6 +27,8 @@ class FollowLine:
         self.srv = Server(FollowLaneLukeConfig, self.dyn_rcfg_cb)
 
         rospy.Subscriber('/camera/image_raw', Image, self.camera_callback)
+
+        self.rate.sleep()
 
     def dyn_rcfg_cb(self, config, level):
         rospy.logwarn("Got config")
@@ -114,7 +117,7 @@ class FollowLine:
         
         return bw_image
 
-    def find_center_point(self, bw_image) -> 'contour, centroid coordinates x, y':
+    def find_center_point(self, bw_image):
         """
         Inputs:
             bw_image: black and white image
@@ -164,7 +167,6 @@ class FollowLine:
         """
 
         mid = self.cols / 2 +100
-        self.enable_car.publish(self.empty)
 
         if self.config.enable_drive:
             rospy.loginfo(f"DRIVING {self.config.speed} m/s")
@@ -179,6 +181,7 @@ class FollowLine:
             self.vel_msg.linear.x = 0
             self.vel_msg.angular.z = 0
 
+        self.enable_car.publish(Empty())
         self.velocity_pub.publish(self.vel_msg)
 
 if __name__ == '__main__':

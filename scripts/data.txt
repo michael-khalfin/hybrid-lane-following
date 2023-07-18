@@ -1,0 +1,35 @@
+** Lap#1, t taken: 91.70 seconds
+    Avg speed: 0.78 m/s, 2.80 km/h,  1.74 miles/h
+    Avg steer centering err = 38.35659760087241
+  Comfortability: 0.052959971923981886
+
+** Lap#2, t taken: 100.30 seconds
+    Avg speed: 0.71 m/s, 2.56 km/h,  1.59 miles/h
+    Avg steer centering err = 52.67696909272183
+  Comfortability: 0.049627210499680226
+
+** Lap#3, t taken: 80.81 seconds
+    Avg speed: 0.88 m/s, 3.18 km/h,  1.98 miles/h
+    Avg steer centering err = 28.88490099009901
+  Comfortability: 0.06345778984365416
+
+** Lap#4, t taken: 79.90 seconds
+    Avg speed: 0.89 m/s, 3.22 km/h,  2.00 miles/h
+    Avg steer centering err = 57.54067584480601
+  Comfortability: 0.061710444161101836
+
+** Lap#5, t taken: 83.31 seconds
+    Avg speed: 0.86 m/s, 3.09 km/h,  1.92 miles/h
+    Avg steer centering err = 52.22569027611044
+  Comfortability: 0.056144771270666874
+
+** Lap#6, t taken: 84.21 seconds
+    Avg speed: 0.85 m/s, 3.05 km/h,  1.90 miles/h
+    Avg steer centering err = 31.290973871733968
+  Comfortability: 0.05607789853746472
+
+** Lap#7, t taken: 97.10 seconds
+    Avg speed: 0.74 m/s, 2.65 km/h,  1.65 miles/h
+    Avg steer centering err = 31.647785787847578
+  Comfortability: 0.05637109896735136
+

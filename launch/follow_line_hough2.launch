@@ -7,7 +7,11 @@
 
 	<node pkg="rqt_reconfigure" type="rqt_reconfigure" name="rqt_console" args="-t" />
 
-	<node name="follow_lane_contour" pkg="follow_lane_pkg" type="follow_lane_contour.py" required="true" output="screen">
+	<node name="red_detect_n" pkg="follow_lane_pkg" type="red_detect_n.py" required="true" output="screen">
+		<param name="imgtopic_name" type="str" value="camera_view" />
+	</node>
+
+	<node name="follow_line_hough" pkg="follow_lane_pkg" type="follow_lane_hough2.py" required="true" output="screen">
 		<param name="imgtopic_name" type="str" value="camera_view" />
 	</node>
 
